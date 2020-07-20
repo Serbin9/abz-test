@@ -1,0 +1,19 @@
+@import '../styles/vars.scss';
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 0;
+    width: 708px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 964px;
+  }
+
+  @media (min-width: 2560px) {
+    width: 1170px;
+  }
+}

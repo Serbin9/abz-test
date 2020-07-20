@@ -1,0 +1,80 @@
+@import '../../styles/vars.scss';
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+
+  &-modal {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    max-width: 396px;
+    width: 90%;
+    height: 190px;
+    background-color: $background-color;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+      0 2px, 1px, -1px rgba(0, 0, 0, 0.12);
+    position: relative;    
+
+    &_title {
+      padding: 10px 0 16px 16px;
+      font-size: 24px;
+      color: $text-color;
+    }
+
+    &_response {
+      font-size: 16px;
+      padding: 17px 0;
+      border-top: 1px solid #eceef1;
+      border-bottom: 1px solid #eceef1;
+      color: $text-light-color;
+      padding-left: 20px;
+      margin-bottom: 17px;
+    }
+
+    &_btn {
+      width: 80px;
+      height: 38px;
+      border-radius: 4px;
+      background-color: $primary-color;
+      color: $background-color;
+      font-size: 16px;
+      font-weight: 600;
+      outline: none;
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+      transition: background-color 300ms ease-in-out;
+      margin-left: 70%;
+
+      &:hover {
+        background-color: $primary-color-hover;
+      }
+
+      @media (min-width: 768px) {
+        margin-left: 75%;
+      }
+    }
+
+    &_closeBtn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      fill: #7b7b7b;
+      cursor: pointer;
+      transition: fill 200ms ease-in-out, transform 200ms ease-in-out;
+
+      &:hover {
+        fill: #464646;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

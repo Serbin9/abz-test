@@ -1,0 +1,62 @@
+@import '../../styles/vars.scss';
+
+.nav {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: $background-color;
+
+  @media (min-width: 768px) {
+    height: 60px;
+  }
+
+  &-bar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo,
+    &_burger {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &_logo {
+      line-height: 0;
+      font-size: 0;
+      color: transparent;
+      width: 133px;
+      background-image: url(../../assets/images/logo.svg);
+    }
+
+    &_burger {
+      cursor: pointer;
+      width: 20px;
+      background-image: url(../../assets/images/menu-icon.svg);
+    }
+
+    &_list {
+      width: 445px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      &-item {
+        color: $text-color;
+        transition: color 300ms ease-in-out;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        &:active {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

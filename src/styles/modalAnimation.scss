@@ -1,0 +1,29 @@
+.modalAnimation-enter {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+}
+
+.modalAnimation-enter-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+  transform: scale(1);
+  transition: all 300ms ease-in-out;
+}
+
+.modalAnimation-exit {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: initial;
+}
+
+.modalAnimation-exit-active {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: all 300ms ease-in-out;
+}
